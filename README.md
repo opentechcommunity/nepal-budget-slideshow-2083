@@ -6,6 +6,14 @@ An interactive, elegant slideshow presentation of Nepal's Federal Budget for Fis
 ![React](https://img.shields.io/badge/React-18.3-blue)
 ![Vite](https://img.shields.io/badge/Vite-6.0-purple)
 
+## 🚀 Quick Links
+
+- **[5-Minute Quick Start](./QUICK-START.md)** - Deploy to GitHub Pages in 5 minutes
+- **[GitHub Setup Guide](./GITHUB-SETUP.md)** - Step-by-step with troubleshooting
+- **[Deployment Guide](./DEPLOYMENT.md)** - Comprehensive deployment instructions
+- **[Pre-Deployment Checklist](./CHECKLIST.md)** - Don't miss anything!
+- **[Troubleshooting Guide](./TROUBLESHOOTING.md)** - Fix common issues
+
 ## 🌟 Features
 
 - **12 Key Sectors**: Comprehensive coverage of major budget sectors including Taxation, Energy, Roads, Agriculture, Education, Health, Technology & AI, Investment, Tourism, Social Security, Labour, and Governance
@@ -49,8 +57,8 @@ Visit the live site: [Your GitHub Pages URL]
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/nepal-budget-slideshow.git
-cd nepal-budget-slideshow
+git clone https://github.com/arjun-gautam/nepal-budget-slideshow-2083.git
+cd nepal-budget-slideshow-2083
 ```
 
 2. Install dependencies:
@@ -103,7 +111,7 @@ The script will:
 ```javascript
 export default defineConfig({
   plugins: [react()],
-  base: '/nepal-budget-slideshow/', // Replace with your repo name
+  base: '/nepal-budget-slideshow-2083/', // Replace with your repo name
 })
 ```
 
@@ -155,7 +163,7 @@ git push origin main
 4. Enable GitHub Pages:
    - Go to your repository Settings → Pages
    - Source: GitHub Actions
-   - Your site will be live at `https://yourusername.github.io/nepal-budget-slideshow/`
+   - Your site will be live at `https://arjun-gautam.github.io/nepal-budget-slideshow-2083/`
 
 ### Option 2: Manual Deployment
 
@@ -200,7 +208,7 @@ Each sector contains:
 ## 📂 Project Structure
 
 ```
-nepal-budget-slideshow/
+nepal-budget-slideshow-2083/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml             # GitHub Actions deployment

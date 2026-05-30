@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Uncomment and update the base path when deploying to GitHub Pages
-  // base: '/nepal-budget-slideshow/', // Replace with your repository name
+  base: '/nepal-budget-slideshow-2083/', // Replace with your repository name
 })
