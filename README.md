@@ -57,8 +57,8 @@ Visit the live site: [Your GitHub Pages URL]
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/arjun-gautam/nepal-budget-slideshow-2083.git
-cd nepal-budget-slideshow-2083
+git clone https://github.com/arjun-gautam/nepal-budget-slideshow-2083-2083.git
+cd nepal-budget-slideshow-2083-2083
 ```
 
 2. Install dependencies:
@@ -111,7 +111,7 @@ The script will:
 ```javascript
 export default defineConfig({
   plugins: [react()],
-  base: '/nepal-budget-slideshow-2083/', // Replace with your repo name
+  base: '/nepal-budget-slideshow-2083-2083/', // Replace with your repo name
 })
 ```
 
@@ -163,7 +163,7 @@ git push origin main
 4. Enable GitHub Pages:
    - Go to your repository Settings → Pages
    - Source: GitHub Actions
-   - Your site will be live at `https://arjun-gautam.github.io/nepal-budget-slideshow-2083/`
+   - Your site will be live at `https://arjun-gautam.github.io/nepal-budget-slideshow-2083-2083/`
 
 ### Option 2: Manual Deployment
 
@@ -208,7 +208,7 @@ Each sector contains:
 ## 📂 Project Structure
 
 ```
-nepal-budget-slideshow-2083/
+nepal-budget-slideshow-2083-2083/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml             # GitHub Actions deployment
