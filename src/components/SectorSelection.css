@@ -1,0 +1,330 @@
+/* ── Page ────────────────────────────────────────────────── */
+.selection-page {
+  min-height: 100vh;
+  background: #111008;
+  color: #e8e2d6;
+  padding: 0 0 96px;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.selection-header {
+  text-align: center;
+  padding: 52px 24px 40px;
+  border-bottom: 1px solid #1e1a10;
+  margin-bottom: 0;
+}
+
+.header-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #c9a84c;
+  margin-bottom: 16px;
+}
+
+.header-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: clamp(38px, 9vw, 68px);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: #f0ece2;
+  margin: 0 0 16px;
+  line-height: 1.08;
+}
+
+.header-subtitle {
+  font-size: 15px;
+  color: #9a9080;
+  max-width: 380px;
+  margin: 0 auto 20px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+.header-meta {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #5a5040;
+  text-transform: uppercase;
+}
+
+/* ── Controls row ────────────────────────────────────────── */
+.selection-controls {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #1a1608;
+}
+
+.ctrl-btn {
+  background: transparent;
+  border: 1px solid #2a2416;
+  color: #7a7060;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ctrl-btn:active,
+.ctrl-btn:hover {
+  border-color: #c9a84c;
+  color: #c9a84c;
+}
+
+/* ── Sector grid ─────────────────────────────────────────── */
+.sector-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Hairline separators between cards */
+  gap: 0;
+}
+
+.sector-grid > .sector-card {
+  border-bottom: 1px solid #1a1608;
+}
+
+@media (min-width: 560px) {
+  .sector-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Right column cards get a left border */
+  .sector-grid > .sector-card:nth-child(2n) {
+    border-left: 1px solid #1a1608;
+  }
+}
+
+@media (min-width: 900px) {
+  .sector-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    padding: 20px 20px 0;
+    border: none;
+    background: transparent;
+  }
+  .sector-grid > .sector-card {
+    border-bottom: none;
+  }
+  .sector-grid > .sector-card:nth-child(2n) {
+    border-left: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sector-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 32px 0;
+  }
+}
+
+/* ── Sector card ─────────────────────────────────────────── */
+.sector-card {
+  position: relative;
+  background: #111008;
+  border: none;
+  padding: 22px 20px 20px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  color: inherit;
+  font-family: inherit;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sector-card:active {
+  background: #181408;
+}
+
+@media (min-width: 900px) {
+  .sector-card {
+    border: 1px solid #1e1a0e;
+    border-radius: 4px;
+    padding: 26px 24px 22px;
+  }
+  .sector-card:hover {
+    border-color: #3a3020;
+    background: #161208;
+  }
+}
+
+.sector-card.selected {
+  background: #18140a;
+}
+
+@media (min-width: 900px) {
+  .sector-card.selected {
+    border-color: #c9a84c;
+    background: #18140a;
+  }
+}
+
+/* ── Checkbox ────────────────────────────────────────────── */
+.card-check {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #2e2818;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  flex-shrink: 0;
+}
+
+.card-check.checked {
+  background: #c9a84c;
+  border-color: #c9a84c;
+}
+
+/* ── Card content ────────────────────────────────────────── */
+.card-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  font-weight: 500;
+  padding-right: 32px;
+}
+
+.card-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 21px;
+  font-weight: 400;
+  color: #ede8de;
+  margin-bottom: 9px;
+  line-height: 1.25;
+  padding-right: 32px;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #6a6050;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.card-count {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #3a3020;
+  text-transform: uppercase;
+}
+
+.sector-card.selected .card-count {
+  color: #7a6030;
+}
+
+/* ── Sticky bottom bar ───────────────────────────────────── */
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  /* Warm dark with blur */
+  background: rgba(15, 12, 5, 0.97);
+  border-top: 1px solid #2a2416;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.sticky-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+/* ── Selection count ─────────────────────────────────────── */
+.sticky-count {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.count-zero {
+  font-size: 13px;
+  color: #3a3020;
+  letter-spacing: 0.04em;
+}
+
+.count-num {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #c9a84c;
+  line-height: 1;
+}
+
+.count-label {
+  font-size: 13px;
+  color: #7a7060;
+  letter-spacing: 0.05em;
+}
+
+/* ── Start button ────────────────────────────────────────── */
+.start-btn {
+  background: #c9a84c;
+  color: #0e0b04;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 50px;
+}
+
+.start-btn:active:not(.disabled),
+.start-btn:hover:not(.disabled) {
+  background: #d9b85c;
+}
+
+.start-btn.disabled {
+  background: #1e1a0e;
+  color: #3a3020;
+  cursor: not-allowed;
+}
+
+.start-arrow-icon {
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.start-btn:hover:not(.disabled) .start-arrow-icon {
+  transform: translateX(3px);
+}
+
+/* ── Safe area for notched phones ────────────────────────── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .sticky-bar {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .selection-page {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+}
